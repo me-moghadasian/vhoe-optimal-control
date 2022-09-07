@@ -4,7 +4,7 @@ function res = doInterp(M, n, PROBLEM)
     res  = zeros(n*PROBLEM.c, colN);
     for j = 1:colN
         for k = 1:n
-            if size(M, 1)==n % COnstant time matrix
+            if size(M, 1)==n % Constant time matrix
                 res((k-1)*PROBLEM.c+1:k*PROBLEM.c, j) = M(k, j);
             else
                 res((k-1)*PROBLEM.c+1:k*PROBLEM.c, j) =...

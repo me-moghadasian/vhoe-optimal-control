@@ -1,19 +1,23 @@
 function PROBLEM = VHOE_NOCSolver(PROBLEM)
-    %% VHOE_NOCSolver is designed to solve nonlinear optimal
-    % control problems. This program uses Vectorised High
-    % Order Expansions (VHOE) method which was introduced
-    % by Dr. Mehdi Moghadasian in 2019. 
+    %% VHOE_NOCSolver can be used to solve nonlinear optimal control problems.
+    % The software package VHOE-OC uses Vectorised High Order Expansions (VHOE) method [1]
+    % and has been designed by Dr. Mehdi Moghadasian.
+    %
+    % This package is available under the GNU General Public License v3.0;
+    % please refer to the license file for more information.
     %
     % This tool supports 3 types of optimal control problems:
     %    1. Infinite Horizon 
     %    2. Finite Horizon with Fixed Terminal Time and State
     %       (Hard Constraint Problem)
     %    3. Finite Horizon with Fixed Terminal Time and Mayer
-    %       Termial State (Soft Constraint Problem)
+    %       Termial State (Bolza: Soft Constraint Problem)
     %
     % Check \examples\ folder or the following reference 
-    %  for more information.
-    % [1] ...
+    %  for more information:
+    %
+    % [1] M. Moghadasian, J. Roshanian, Approximately optimal manoeuvre
+    %     strategy for aero-assisted space mission, Adv. Sp. Res. 64 (2019) 436–450. https://doi.org/10.1016/j.asr.2019.04.003.
     %
     % -------------------------------------------------------
     % The variable PROBLEM contains both input and output of
@@ -38,7 +42,7 @@ function PROBLEM = VHOE_NOCSolver(PROBLEM)
     %   PROBLEM.R: Weight matrix in quadratic format related to control
     %       variables
     %   PROBLEM.H: Weight matrix in quadratic format related to state
-    %       variables in Mayer form
+    %       variables in Bolza form
     %   PROBLEM.D: Combined state-costate coefficients if the provided
     %       model is prepared explicitly by applying OC theory.
     %   
@@ -47,8 +51,7 @@ function PROBLEM = VHOE_NOCSolver(PROBLEM)
     %       even if the coeffs are constant. For type 1, all elements are
     %       constant scalar.
     %
-    % Outputs:
-    %   
+
     
     %% Check problem data
     % The problem type will be specified here
