@@ -17,7 +17,7 @@ This tool supports 3 types of optimal control problems:
 Please run setup script first and then check *examples* folder. 
 
 ## References:
-The following references for more information:
+Refer to the following references for more information:
 
  [1] M. Moghadasian, J. Roshanian, Approximately optimal manoeuvre
      strategy for aero-assisted space mission, Adv. Sp. Res. 64 (2019) 436–450. https://doi.org/10.1016/j.asr.2019.04.003.
