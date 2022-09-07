@@ -13,10 +13,10 @@ This tool supports 3 types of optimal control problems:
     3. Finite Horizon with Fixed Terminal Time and Mayer
        Termial State (Bolza: Soft Constraint Problem)
 
-# Setup
+## Setup
 Please run setup script first and then check *examples* folder. 
 
-# References:
+## References:
 The following references for more information:
 
  [1] M. Moghadasian, J. Roshanian, Approximately optimal manoeuvre
